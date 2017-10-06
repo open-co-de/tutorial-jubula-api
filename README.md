@@ -17,3 +17,5 @@ EclipseCon - Jubula API tutorial
 - `<DemosAndSamplesExtractionLocation>/demo/javafx_samples/Ensemble8.jar` launches (e.g. by double-clicking)
 - Eclipse starts and has JDK 8 available
 - the [Jubula AUT Agent is started with -om option](https://testing.bredex.de/faqs/jubula-api-setup.html)
+
+3. Clone [this git repository](https://github.com/open-co-de/tutorial-jubula-api.git) to your local machine
