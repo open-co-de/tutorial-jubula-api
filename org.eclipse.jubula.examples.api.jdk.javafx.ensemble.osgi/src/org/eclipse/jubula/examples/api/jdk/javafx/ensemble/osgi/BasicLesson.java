@@ -24,10 +24,6 @@ import org.junit.Test;
 
 /** @author BREDEX GmbH */
 public class BasicLesson {
-    /** AUT-Agent host name to use */
-    public static final String AGENT_HOST = "localhost"; //$NON-NLS-1$
-    /** AUT-Agent port to use */
-    public static final int AGENT_PORT = 60000;
     /** the AUT-Agent */
     private AUTAgent m_agent;
     /** the AUT */
@@ -38,16 +34,16 @@ public class BasicLesson {
     public void setUp() throws Exception {
         /* Connecting to external Jubula AUT Agent which
         must be started manually BEFORE test execution! */
-        m_agent = MakeR.createAUTAgent(AGENT_HOST, AGENT_PORT);
+        m_agent = MakeR.createAUTAgent("localhost", 60000);
         m_agent.connect();
 
         final String autID = "Ensemble8"; //$NON-NLS-1$
         AUTConfiguration config = new JavaFXAUTConfiguration(
                 "org.eclipse.jubula.examples.api.jdk.javafx.ensemble.osgi", //$NON-NLS-1$
                 autID,
-                "java.exe", //$NON-NLS-1$
-                null, 
-                new String[]{"-jar", "c:\\work\\Ensemble8.jar"} //$NON-NLS-1$ //$NON-NLS-2$
+                "java", //$NON-NLS-1$
+                "<pathToEnsembleJAR>", //$NON-NLS-1$
+                new String[]{"-jar", "Ensemble8.jar"} //$NON-NLS-1$ //$NON-NLS-2$
                 );
 
         AUTIdentifier id = m_agent.startAUT(config);
