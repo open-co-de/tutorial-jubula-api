@@ -19,3 +19,5 @@ EclipseCon - Jubula API tutorial
 - the [Jubula AUT Agent is started with -om option](https://testing.bredex.de/faqs/jubula-api-setup.html)
 
 3. Clone [this git repository](https://github.com/open-co-de/tutorial-jubula-api.git) to your local machine
+4. Grab a cup of coffee and join the [ECE 2017 tutorial](https://www.eclipsecon.org/europe2017/session/ui-test-automation-using-jubula-api-why-how-and-what)
+5. Enjoy!
