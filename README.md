@@ -3,6 +3,9 @@ EclipseCon - Jubula API tutorial
 
 # prerequisites
 
+## note: the tutorial will only work on Windows / Linux
+- [why macOS does not work](http://eclip.se/525658)
+
 1. Download and install
 - [Java SE Development Kit 8](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
 - Java SE Development Kit 8 Demos and Samples 
