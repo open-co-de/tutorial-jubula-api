@@ -1,9 +1,9 @@
 # tutorial-jubula-api
 EclipseCon - Jubula API tutorial
 
-# prerequisites
+## prerequisites
 
-## note: the tutorial will only work on Windows / Linux
+### note: the tutorial will only work on Windows / Linux
 - [why macOS does not work](http://eclip.se/525658)
 
 1. Download and install
@@ -26,3 +26,6 @@ EclipseCon - Jubula API tutorial
 4. Grab a cup of coffee and join the [ECE 2017 tutorial](https://www.eclipsecon.org/europe2017/session/ui-test-automation-using-jubula-api-why-how-and-what)
 
 5. Enjoy!
+
+## Slides
+ 1. [Introduction](https://open-co-de.github.io/tutorial-jubula-api/slides/01_Intro.html)
