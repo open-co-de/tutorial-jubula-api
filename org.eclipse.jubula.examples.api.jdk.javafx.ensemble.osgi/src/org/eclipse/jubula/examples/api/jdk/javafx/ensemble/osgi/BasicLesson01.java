@@ -13,9 +13,8 @@ package org.eclipse.jubula.examples.api.jdk.javafx.ensemble.osgi;
 import org.eclipse.jubula.client.AUT;
 import org.eclipse.jubula.client.AUTAgent;
 import org.eclipse.jubula.client.MakeR;
-import org.eclipse.jubula.client.launch.AUTConfiguration;
+import org.eclipse.jubula.examples.api.jdk.javafx.ensemble.osgi.env.LocalSettings;
 import org.eclipse.jubula.toolkit.javafx.JavafxComponents;
-import org.eclipse.jubula.toolkit.javafx.config.JavaFXAUTConfiguration;
 import org.eclipse.jubula.tools.AUTIdentifier;
 import org.junit.After;
 import org.junit.Assert;
@@ -23,7 +22,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 /** @author BREDEX GmbH */
-public class BasicLesson {
+public class BasicLesson01 {
     /** the AUT-Agent */
     private AUTAgent m_agent;
     /** the AUT */
@@ -32,21 +31,10 @@ public class BasicLesson {
     /** prepare */
     @Before
     public void setUp() throws Exception {
-        /* Connecting to external Jubula AUT Agent which
-        must be started manually BEFORE test execution! */
         m_agent = MakeR.createAUTAgent("localhost", 60000);
         m_agent.connect();
 
-        final String autID = "Ensemble8"; //$NON-NLS-1$
-        AUTConfiguration config = new JavaFXAUTConfiguration(
-                "org.eclipse.jubula.examples.api.jdk.javafx.ensemble.osgi", //$NON-NLS-1$
-                autID,
-                "java", //$NON-NLS-1$
-                "<pathToEnsembleJAR>", //$NON-NLS-1$
-                new String[]{"-jar", "Ensemble8.jar"} //$NON-NLS-1$ //$NON-NLS-2$
-                );
-
-        AUTIdentifier id = m_agent.startAUT(config);
+        AUTIdentifier id = m_agent.startAUT(LocalSettings.myAUTStartConfig());
         if (id != null) {
             m_aut = m_agent.getAUT(id, JavafxComponents.getToolkitInformation());
             m_aut.connect();
