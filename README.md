@@ -29,3 +29,4 @@ EclipseCon - Jubula API tutorial
 
 ## Slides
  1. [Introduction](https://open-co-de.github.io/tutorial-jubula-api/slides/01_Intro.html)
+ 1. [Basics](https://open-co-de.github.io/tutorial-jubula-api/slides/02_Basics.html)
