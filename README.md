@@ -31,5 +31,5 @@ EclipseCon - Jubula API tutorial
  1. [Introduction](https://open-co-de.github.io/tutorial-jubula-api/slides/01_Intro.html)
  1. [Jubula basics](https://open-co-de.github.io/tutorial-jubula-api/slides/02_Basics.html)
  1. [Advanced topics](https://open-co-de.github.io/tutorial-jubula-api/slides/03_Advanced.html)
- 1. [Equivalence classes](https://open-co-de.github.io/tutorial-jubula-api/slides/04_Equivalence.html)
+ 1. [Equivalence classes](https://open-co-de.github.io/tutorial-jubula-api/slides/04_Equi.html)
  1. [Summary](https://open-co-de.github.io/tutorial-jubula-api/slides/05_Summary.html)
