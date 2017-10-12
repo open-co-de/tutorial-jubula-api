@@ -22,7 +22,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 /** @author BREDEX GmbH */
-public class BasicLesson01 {
+public class BasicExercise01 {
     /** the AUT-Agent */
     private AUTAgent m_agent;
     /** the AUT */
