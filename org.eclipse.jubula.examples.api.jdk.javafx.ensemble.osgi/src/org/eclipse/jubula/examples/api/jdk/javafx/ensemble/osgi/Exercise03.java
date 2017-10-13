@@ -22,7 +22,7 @@ public class Exercise03 extends Exercise02 {
     @Test
     public void testCAP() {
         Application app = JavafxComponents.createStage();
-        CAP waitForWindow = app.waitForWindow(".*Ensmble.*", 
+        CAP waitForWindow = app.waitForWindow(".*Ensemble.*", 
                                               Operator.matches,
                                               15 * 1000, 
                                               1000);
