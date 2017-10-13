@@ -44,7 +44,14 @@ public class Exercise05 extends Exercise02 {
 
     @Test
     public void performLogin() {
-        // insert test to perform login
+        String username = "demo";
+        String password = "demo";
+        
+        aut.execute(JavafxComponents.createTextField(OM.username).replaceText(username), null);
+        aut.execute(JavafxComponents.createTextField(OM.password).replaceText(password), null);
+        
+        Modifier[] none = { Modifier.none };
+        aut.execute(JavafxComponents.createStage().keyCombination(none, "ENTER"), null);
     }
 
     @After
