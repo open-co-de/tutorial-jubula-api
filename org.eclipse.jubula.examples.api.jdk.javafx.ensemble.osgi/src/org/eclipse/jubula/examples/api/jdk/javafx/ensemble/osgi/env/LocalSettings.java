@@ -15,15 +15,17 @@ import org.eclipse.jubula.toolkit.javafx.config.JavaFXAUTConfiguration;
 
 /** Local and environment specific settings */
 public class LocalSettings {
+    public static final String AUT_AGENT_HOSTNAME = "localhost";
+    public static final int AUT_AGENT_PORT = 60000;
 
-	/** @return the configuration settings to start the AUT */
-	public static AUTConfiguration myAUTStartConfig() {
-		return new JavaFXAUTConfiguration(
-                "org.eclipse.jubula.examples.api.jdk.javafx.ensemble.osgi", //$NON-NLS-1$
-                "Ensemble8",
-                "java", //$NON-NLS-1$
-                "<pathToEnsembleJAR>", //$NON-NLS-1$
-                new String[]{"-jar", "Ensemble8.jar"} //$NON-NLS-1$ //$NON-NLS-2$
-                );
-	}
+    /** @return the configuration settings to start the AUT */
+    public static AUTConfiguration myAUTStartConfig() {
+        return new JavaFXAUTConfiguration(
+                "My first AUT",
+                "Ensemble8_AUT_ID", 
+                "java",
+                "/pathToEnsembleJAR/",
+                new String[] { "-jar", "Ensemble8.jar" }
+        );
+    }
 }

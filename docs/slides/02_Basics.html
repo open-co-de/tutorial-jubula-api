@@ -28,15 +28,27 @@
             <h1>Jubula API</h1>
             <h2>the basics</h2>
         </section>
-        <section data-background="#E5F3F9">
-            <h2>Excerise 0</h2>
-            <h3>Check prerequisites</h3>
+        <section data-background="#E8F9E5">
+            <h2>Exercise 0</h2>
+            <h3>Check prerequisites 1</h3>
             <ol>
-                <li>Tools installed: JDK 8 + Samples</li>
-                <li>Jubula ready: AUT-Agent and ITE</li>
-                <li>Eclipse for Committer (PDE)</li>
-                <li>Tutorial git repo cloned and up-to-date</li>
-                <li>Project imported, target platform set, no compile errors</li>
+                <li>Tools installed: JDK <b>8</b> + Samples<pre><code data-trim data-noescape>
+>java -version
+java version "1.8.0_144"</code></pre></li>
+                <li>Jubula ready: AUT-Agent and ITE<br>
+            		<img src="../img/aut-agent_withOM.png"></li>
+            </ol>
+        </section>
+        <section data-background="#E8F9E5">
+            <h2>Exercise 0</h2>
+            <h3>Check prerequisites 2</h3>
+            <ol>
+                <li>Eclipse for Committer <b>(PDE)</b></li>
+                <li>Tutorial git repo cloned and up-to-date<pre><code data-trim data-noescape>
+git clone https://github.com/open-co-de/
+                  tutorial-jubula-api.git</code></pre></li>
+                <li>Project imported, target platform set, no compile errors<pre><code data-trim data-noescape>
+o.e.j.e.a.j.j.e.osgi/ide/api-OSGi.target</code></pre></li>
             </ol>
         </section>
         <section data-background="#E5F3F9">
@@ -47,25 +59,70 @@
             <p class="fragment grow">CAPs</p>
         </section>
         <section data-background="#E5F3F9">
-            <h2>Lesson 1</h2>
-            <h3>Jubula - the big picture</h3>
+            <h2>Jubula</h2>
+            <h3>the big picture</h3>
+            <img src="../img/jubula-big-pic.png">
         </section>
         <section data-background="#E5F3F9">
             <h2>AUT-Agent</h2>
+            <h3>controls the AUTs lifecycle</h3>
+            <pre><code data-trim data-noescape>
+AUTAgent agent = MakeR.createAUTAgent("hostname", 4711);
+         agent.connect();
+[...]
+         agent.startAUT(...);
+         agent.stopAUT(...);
+[...]
+         agent.disconnect();
+</code></pre>
+        </section>
+        <section data-background="#E8F9E5">
+            <h2>BasicExercise01.java</h2>
+            <h3>Connect to AUT-Agent</h3>
+            <h3>Disconnect from AUT-Agent</h3>
         </section>
         <section data-background="#E5F3F9">
             <h2>AUT</h2>
+            <h3>Application under Test</h3>
+            <img src="../img/aut-ensemble.png" width="30%">
         </section>
         <section data-background="#E5F3F9">
-            <h2>BasicExercise01.java</h2>
-            <h3>Connecting to AUT-Agent</h3>
-            <h3>Starting the AUT</h3>
-            <h3>Stopping the AUT</h3>
-            <h3>Disconnecting from AUT-Agent</h3>
+            <h2>BasicExercise02.java</h2>
+            <h3 class="fragment shrink">Connect to AUT-Agent</h3>
+            <h3 class="fragment grow">Starting the AUT</h3>
+            <h3 class="fragment grow">Stopping the AUT</h3>
+            <h3 class="fragment shrink">Disconnect from AUT-Agent</h3>
         </section>
         <section data-background="#E5F3F9">
+            <h2>AUT Configuration</h2>
+            <h3>information to create and manage process</h3>
+            <pre><code data-trim data-noescape>
+AUTConfiguration config = new JavaFXAUTConfiguration(
+                "arbitrary name for AUT",
+                "AUT-ID",
+                "command",
+                "workingDirectory",
+                new String[]{"arg0", "arg1"});
+[...]
+AUTAgent agent.startAUT(config);
+[...]
+</code></pre>
+        </section>
+        <section data-background="#E8F9E5">
             <h2>LocalSettings.java</h2>
-            <h3>Set your environment specific parameters for AUT to start</h3>
+            <h3>Adjust path to AUTs JAR</h3>
+            <pre><code data-trim data-noescape>
+public static AUTConfiguration myAUTStartConfig() {
+    return new JavaFXAUTConfiguration(
+            "My first AUT",
+            "Ensemble8_AUT_ID", 
+            "java",
+            "/pathToEnsembleJAR/",
+            new String[] { "-jar", "Ensemble8.jar" }
+    );
+}
+</code></pre>
+            <h3>then run: BasicExercise02.java</h3>
         </section>
         <section data-background="#E5F3F9">
             <h2>BasicExercise02.java</h2>
