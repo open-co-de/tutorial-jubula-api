@@ -10,10 +10,13 @@
  *******************************************************************************/
 package org.eclipse.jubula.examples.api.jdk.javafx.ensemble.osgi;
 
+import org.eclipse.jubula.toolkit.base.components.TextInputComponent;
 import org.eclipse.jubula.toolkit.concrete.components.Application;
 import org.eclipse.jubula.toolkit.enums.ValueSets.Modifier;
 import org.eclipse.jubula.toolkit.enums.ValueSets.Operator;
 import org.eclipse.jubula.toolkit.javafx.JavafxComponents;
+import org.eclipse.jubula.toolkit.javafx.components.TextField;
+import org.eclipse.jubula.tools.ComponentIdentifier;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -27,6 +30,10 @@ public class Exercise05 extends Exercise02 {
                             Operator.matches,
                             15 * 1000, 
                             1000), null);
+
+        ComponentIdentifier<TextField> ensembleSearchCI = OM.ensembleSearch;
+        TextInputComponent ensembleSearch = JavafxComponents.createTextField(ensembleSearchCI);
+        aut.execute(ensembleSearch.replaceText("FXML Login Demo"), null);
         
         Modifier[] none = { Modifier.none };
         Application stage = JavafxComponents.createStage();
