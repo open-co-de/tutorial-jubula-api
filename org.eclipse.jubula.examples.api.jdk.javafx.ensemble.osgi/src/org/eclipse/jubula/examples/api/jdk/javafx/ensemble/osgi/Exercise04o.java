@@ -22,34 +22,31 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 /** @author BREDEX GmbH */
-public class Exercise02 {
+public class Exercise04o {
     private static AUTAgent agent;
-    protected static AUT aut;
+    private static AUT aut;
 
     @BeforeClass
     public static void setUp() throws Exception {
         agent = MakeR.createAUTAgent(LocalSettings.AUT_AGENT_HOSTNAME, 
-                                       LocalSettings.AUT_AGENT_PORT);
+                                     LocalSettings.AUT_AGENT_PORT);
         agent.connect();
 
         AUTIdentifier id = agent.startAUT(LocalSettings.myAUTStartConfig());
         if (id != null) {
             aut = agent.getAUT(id, JavafxComponents.getToolkitInformation());
-            aut.connect();
         } else {
             Assert.fail("AUT start has failed!"); //$NON-NLS-1$
         }
     }
-    
+
     @Test
-    public void testAUTConnection() {
-        Assert.assertTrue(aut.isConnected());
+    public void test() {
+        Assert.assertTrue(aut != null);
     }
 
     @AfterClass
     public static void tearDown() throws Exception {
-        aut.disconnect();
-        agent.stopAUT(aut.getIdentifier());
         agent.disconnect();
     }
 }

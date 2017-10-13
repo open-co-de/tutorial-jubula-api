@@ -13,31 +13,28 @@ package org.eclipse.jubula.examples.api.jdk.javafx.ensemble.osgi;
 import org.eclipse.jubula.client.AUTAgent;
 import org.eclipse.jubula.client.MakeR;
 import org.eclipse.jubula.examples.api.jdk.javafx.ensemble.osgi.env.LocalSettings;
-import org.junit.After;
+import org.junit.AfterClass;
 import org.junit.Assert;
-import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 public class Exercise01 {
-    /** the AUT-Agent */
-    private AUTAgent m_agent;
+    private static AUTAgent agent;
 
-    /** prepare */
-    @Before
-    public void setUp() throws Exception {
-        m_agent = MakeR.createAUTAgent(LocalSettings.AUT_AGENT_HOSTNAME, 
-                                       LocalSettings.AUT_AGENT_PORT);
-        m_agent.connect();
+    @BeforeClass
+    public static void setUp() throws Exception {
+        agent = MakeR.createAUTAgent(LocalSettings.AUT_AGENT_HOSTNAME, 
+                                     LocalSettings.AUT_AGENT_PORT);
+        agent.connect();
     }
-    
+
     @Test
-    public void test() {
-        Assert.assertTrue(m_agent.isConnected());
+    public void testAUTAgentConnection() {
+        Assert.assertTrue(agent.isConnected());
     }
 
-    /** cleanup */
-    @After
-    public void tearDown() throws Exception {
-        m_agent.disconnect();
+    @AfterClass
+    public static void tearDown() throws Exception {
+        agent.disconnect();
     }
 }

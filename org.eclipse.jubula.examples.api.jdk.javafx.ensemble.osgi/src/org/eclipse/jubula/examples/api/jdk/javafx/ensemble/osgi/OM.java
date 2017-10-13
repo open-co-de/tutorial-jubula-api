@@ -10,11 +10,15 @@
  *******************************************************************************/
 package org.eclipse.jubula.examples.api.jdk.javafx.ensemble.osgi;
 
+import org.eclipse.jubula.toolkit.javafx.components.TextField;
+import org.eclipse.jubula.tools.ComponentIdentifier;
+
 /** 
  * Object Mapping 
  */
 public class OM {
-    
+    public static final ComponentIdentifier<TextField> ensembleSearch = null; // MakeR.createCI("")
+
     /** Constructor */
     private OM() {
         // private
