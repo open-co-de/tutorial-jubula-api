@@ -21,7 +21,6 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-/** @author BREDEX GmbH */
 public class Exercise04 extends Exercise02 {
     @Before
     public void localSetUp() throws Exception {

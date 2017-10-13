@@ -18,7 +18,6 @@ import org.eclipse.jubula.toolkit.javafx.JavafxComponents;
 import org.junit.Assert;
 import org.junit.Test;
 
-/** @author BREDEX GmbH */
 public class Exercise03 extends Exercise02 {
     @Test
     public void testCAP() {

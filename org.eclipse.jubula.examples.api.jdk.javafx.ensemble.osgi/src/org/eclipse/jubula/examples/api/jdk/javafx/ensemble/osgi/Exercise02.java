@@ -21,7 +21,6 @@ import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-/** @author BREDEX GmbH */
 public class Exercise02 {
     private static AUTAgent agent;
     protected static AUT aut;

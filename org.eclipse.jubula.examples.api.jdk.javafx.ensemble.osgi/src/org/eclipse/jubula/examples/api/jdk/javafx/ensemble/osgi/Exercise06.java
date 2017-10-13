@@ -15,7 +15,6 @@ import org.eclipse.jubula.toolkit.concrete.components.TextInputComponent;
 import org.eclipse.jubula.tools.ComponentIdentifier;
 import org.junit.Test;
 
-/** @author BREDEX GmbH */
 public class Exercise06 extends Exercise04 {
     @Test
     public void testAbstract() {
