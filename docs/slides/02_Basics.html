@@ -28,7 +28,8 @@
             <h1>Jubula API</h1>
             <h2>the basics</h2>
         </section>
-        <section data-background="#E8F9E5">
+        <section>
+            <section data-background="#E8F9E5">
             <h2>Exercise 0</h2>
             <h3>Check prerequisites 1</h3>
             <ol>
@@ -36,25 +37,26 @@
 >java -version
 java version "1.8.0_144"</code></pre></li>
                 <li>Jubula ready: AUT-Agent and ITE<br>
-            		<img src="../img/aut-agent_withOM.png"></li>
+                    <img src="../img/aut-agent_withOM.png"></li>
             </ol>
             <h2 class="fragment fade-up"><b>DEMO</b>nstrate</h2>
-        </section>
-        <section data-background="#E8F9E5">
-            <h2>Exercise 0</h2>
-            <h3>Check prerequisites 2</h3>
-            <ol>
-                <li>Eclipse for Committer <b>(PDE)</b></li>
-                <li>Tutorial git repo cloned and up-to-date<pre><code data-trim data-noescape>
-git clone https://github.com/open-co-de/
-                  tutorial-jubula-api.git</code></pre></li>
-                <li>Project imported, target platform set, no compile errors<pre><code data-trim data-noescape>
-o.e.j.e.a.j.j.e.osgi/ide/api-OSGi.target</code></pre></li>
-            </ol>
-            <h2 class="fragment fade-up"><b>DEMO</b>nstrate</h2>
+            </section>
+            <section data-background="#E8F9E5">
+                <h2>Exercise 0</h2>
+                <h3>Check prerequisites 2</h3>
+                <ol>
+                    <li>Eclipse for Committer <b>(PDE)</b></li>
+                    <li>Tutorial git repo cloned and up-to-date<pre><code data-trim data-noescape>
+    git clone https://github.com/open-co-de/
+                      tutorial-jubula-api.git</code></pre></li>
+                    <li>Project imported, target platform set, no compile errors<pre><code data-trim data-noescape>
+    o.e.j.e.a.j.j.e.osgi/ide/api-OSGi.target</code></pre></li>
+                </ol>
+                <h2 class="fragment fade-up"><b>DEMO</b>nstrate</h2>
+            </section>
         </section>
         <section data-background="#E5F3F9">
-            <h2>Topics</h2>
+            <h2>Jubula</h2>
             <p class="fragment grow">AUT-Agent</p>
             <p class="fragment grow">AUT</p>
             <p class="fragment grow">CAPs</p>
@@ -65,10 +67,11 @@ o.e.j.e.a.j.j.e.osgi/ide/api-OSGi.target</code></pre></li>
             <h3>the big picture</h3>
             <img src="../img/jubula-big-pic.png">
         </section>
-        <section data-background="#E5F3F9">
-            <h2>AUT-Agent</h2>
-            <h3>controls the AUTs lifecycle</h3>
-            <pre><code data-trim data-noescape>
+        <section>
+            <section data-background="#E5F3F9">
+                <h2>AUT-Agent</h2>
+                <h3>controls the AUTs lifecycle</h3>
+                <pre><code data-trim data-noescape>
 AUTAgent agent = MakeR.createAUTAgent("hostname", 4711);
          agent.connect();
 [...]
@@ -77,33 +80,35 @@ AUTAgent agent = MakeR.createAUTAgent("hostname", 4711);
 [...]
          agent.disconnect();
 </code></pre>
-        </section>
-        <section data-background="#E8F9E5">
-            <h2>BasicExercise01.java</h2>
-            <p><pre><code data-trim data-noescape>
-launch/BasicExercise01.launch
+            </section>
+            <section data-background="#E8F9E5">
+                <h2>Exercise01.java</h2>
+                <p><pre><code data-trim data-noescape>
+launch/Exercise01.launch
 
 right-click -> Run As -> JUnit</code></pre></p>
-            <h3 class="fragment highlight-green">Connect to AUT-Agent</h3>
-            <h3 class="fragment highlight-green">Disconnect from AUT-Agent</h3>
-            <h2 class="fragment fade-up"><b>DEMO</b>nstrate</h2>
+                <h3 class="fragment highlight-green">Connect to AUT-Agent</h3>
+                <h3 class="fragment highlight-green">Disconnect from AUT-Agent</h3>
+                <h2 class="fragment fade-up"><b>DEMO</b>nstrate</h2>
+            </section>
         </section>
-        <section data-background="#E5F3F9">
-            <h2>AUT</h2>
-            <h3>Application under Test</h3>
-            <img src="../img/aut-ensemble.png" width="30%">
-        </section>
-        <section data-background="#E5F3F9">
-            <h2>BasicExercise02.java</h2>
-            <h3 class="fragment shrink">Connect to AUT-Agent</h3>
-            <h3 class="fragment grow">Starting the AUT</h3>
-            <h3 class="fragment grow">Stopping the AUT</h3>
-            <h3 class="fragment shrink">Disconnect from AUT-Agent</h3>
-        </section>
-        <section data-background="#E5F3F9">
-            <h2>AUT Configuration</h2>
-            <h3>information to create and manage process</h3>
-            <pre><code data-trim data-noescape>
+        <section>
+            <section data-background="#E5F3F9">
+                <h2>AUT</h2>
+                <h3>Application under Test</h3>
+                <img src="../img/aut-ensemble.png" width="30%">
+            </section>
+            <section data-background="#E5F3F9">
+                <h2>Exercise02.java</h2>
+                <h3 class="fragment shrink">Connect to AUT-Agent</h3>
+                <h3 class="fragment grow">Starting the AUT</h3>
+                <h3 class="fragment grow">Stopping the AUT</h3>
+                <h3 class="fragment shrink">Disconnect from AUT-Agent</h3>
+            </section>
+            <section data-background="#E5F3F9">
+                <h2>AUT Configuration</h2>
+                <h3>information to create and manage process</h3>
+                <pre><code data-trim data-noescape>
 AUTConfiguration config = new JavaFXAUTConfiguration(
                 "arbitrary name for AUT",
                 "AUT-ID",
@@ -113,12 +118,12 @@ AUTConfiguration config = new JavaFXAUTConfiguration(
 [...]
 AUTAgent agent.startAUT(config);
 [...]
-</code></pre>
-        </section>
-        <section data-background="#E8F9E5">
-            <h2>LocalSettings.java</h2>
-            <h3>Adjust path to AUTs JAR</h3>
-            <pre><code data-trim data-noescape>
+    </code></pre>
+            </section>
+            <section data-background="#E8F9E5">
+                <h2>LocalSettings.java</h2>
+                <h3>Adjust path to AUTs JAR</h3>
+                <pre><code data-trim data-noescape>
 public static AUTConfiguration myAUTStartConfig() {
     return new JavaFXAUTConfiguration(
             "My first AUT",
@@ -129,15 +134,41 @@ public static AUTConfiguration myAUTStartConfig() {
     );
 }
 </code></pre>
-            <h3>then run: BasicExercise02.java</h3>
-            <h2 class="fragment fade-up"><b>DEMO</b>nstrate</h2>
+                <h3>then run: Exercise02.java</h3>
+                <h2 class="fragment fade-up"><b>DEMO</b>nstrate</h2>
+            </section>
         </section>
-        <section data-background="#E5F3F9">
-            <h2>BasicExercise03.java</h2>
-            <h3>Execute a first real test</h3>
+        <section>
+            <section data-background="#E5F3F9">
+                <img src="../img/cap.png">
+            </section>
+            <section data-background="#E5F3F9">
+                <h2>CAPs</h2>
+                <h3>UI object proxies</h3>
+                <pre><code data-trim data-noescape>
+// independent from AUTs UI state
+Application app = JavafxComponents.createStage();
+CAP waitForWindow = app.waitForWindow(...);
+[...]
+
+// execution in AUTs context
+Result result = m_aut.execute(waitForWindow, ...);
+[...]
+    </code></pre>
+            </section>
+            <section data-background="#E8F9E5">
+                <h2>Exercise03.java</h2>
+                <h3 class="fragment highlight-red">Execute your first UI test</h3>
+                <h3 class="fragment highlight-green">fix test specification problem</h3>
+                <h2 class="fragment fade-up"><b>DEMO</b>nstrate</h2>
+            </section>
         </section>
-        <section data-background="#E5F3F9">
-            <h2>Object Mapping</h2>
+        <section>
+            <section data-background="#E5F3F9">
+                <h2>Object Mapping</h2>
+                
+                <p>required for CAPs without default mapping</p>
+            </section>
         </section>
     </div>
 </div>
