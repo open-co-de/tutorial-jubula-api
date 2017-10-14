@@ -26,10 +26,37 @@
     <div class="slides">
         <section class="deck-slide" data-background="#E5F3F9">
             <h1>Excursion</h1>
-            <h2>Equivalence classes</h2>
+            <h2>Equivalence classes and boundaries</h2>
         </section>
         <section data-background="#E5F3F9">
-            <h2>Topics</h2>
+            <h2>What</h2>
+            <img src="../img/appLOGIN-ok.png" width="50%">
+        </section>
+        <section data-background="#E5F3F9">
+            <h2>Why</h2>
+            <a title="TestPyramid By Martin Fowler" href="https://martinfowler.com/bliki/TestPyramid.html">
+                <img src="https://martinfowler.com/bliki/images/testPyramid/test-pyramid.png">
+            </a>
+        </section>
+        <section>
+            <section data-background="#E5F3F9">
+                <h2>Idea</h2>
+                <a title="By Rinke 80 (Own work) [Public domain], via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File%3AEquivalentie.svg">
+                    <img alt="Equivalentie" src="https://upload.wikimedia.org/wikipedia/commons/3/38/Equivalentie.svg"/>
+                </a>
+                <p>classify equivalent data</p>
+                <p>don't test equivalent constellations more than once</p>
+            </section>
+            <section>
+                <h2>Example: username</h2>
+                <img src="https://qph.ec.quoracdn.net/main-qimg-b38f2858ada5a1f3616668f757583259" width="10%"/>
+                <p style="color:red" class="fragment fade-up">empty name / name too short</p>
+                <p style="color:blue" class="fragment fade-up">name taken</p>
+                <p style="color:green" class="fragment fade-up">name ok</p>
+                <p style="color:purple" class="fragment fade-up">name too long</p>
+                <p style="color:brown" class="fragment fade-up">invalid chars</p>
+                <p style="color:pink" class="fragment fade-up">...</p>
+            </section>
         </section>
     </div>
 </div>
