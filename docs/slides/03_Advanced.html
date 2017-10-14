@@ -31,10 +31,93 @@
         <section data-background="#E5F3F9">
             <h2>Topics</h2>
             <p class="fragment grow">UI Toolkits</p>
-            <p class="fragment grow">Event Handling</p>
-            <p class="fragment grow">Screenshots</p>
             <p class="fragment grow">Object Mapping heuristic</p>
+            <p class="fragment grow">Exception Handling</p>
+            <p class="fragment grow">Screenshots</p>
         </section>
+         <section>
+            <section data-background="#E5F3F9">
+                <h2>UI Toolkits</h2>
+                <img src="../img/tk-idea.png">
+            </section>
+            <section data-background="#E5F3F9">
+                <h2>On API level</h2>
+                <h3>one OSGi bundle per toolkit</h3>
+                <pre><code data-trim data-noescape>
+META-INF\MANIFEST.MF:
+
+org.eclipse.jubula.toolkit.base.api
+org.eclipse.jubula.toolkit.concrete.api
+org.eclipse.jubula.toolkit.javafx.api
+[...]
+org.eclipse.jubula.toolkit.swt.api
+org.eclipse.jubula.toolkit.rcp.api
+org.eclipse.jubula.toolkit.gef.api
+org.eclipse.jubula.toolkit.swing.api
+org.eclipse.jubula.toolkit.html.api
+</code></pre>
+            </section>
+            <section data-background="#E8F9E5">
+                <h2>Exercise06.java</h2>
+                <h3>Compare with Exercise04.java</h3>
+                <pre><code data-trim data-noescape>
+@Test
+public void testAbstract() {
+    [...]
+}</code></pre>
+                <h3>run Exercise06.java</h3>
+                <h2 class="fragment fade-up"><b>DEMO</b>nstrate</h2>
+            </section>
+         </section>
+         <section>
+            <section data-background="#E5F3F9">
+                <h2>Object Mapping heuristic</h2>
+                <img src="../img/om-profile.png">
+                <pre class="fragment fade-up"><code data-trim data-noescape>
+Profile myProfile = MakeR.getProfileFactory()
+    .createProfile(name,  nameWeight, pathWeight, 
+        contextWeight, threshold);
+ensembleSearchCI.setProfile(myProfile);</code></pre>
+            </section>
+         </section>
+         <section>
+            <section data-background="#E5F3F9">
+                <h2>Exception Handling</h2>
+                <img src="../img/exceptions.png">
+                <pre class="fragment fade-up"><code data-trim data-noescape>
+ActionE:             problems with A in CAP
+CheckFailedE:        unexpected result in "check"-CAP
+ComponentNotFoundE:  problems finding C in CAP
+ConfigurationE:      internal; should not occur</code></pre>
+            </section>
+            <section data-background="#E8F9E5">
+                <h2>Exercise07.java</h2>
+                <pre><code data-trim data-noescape>
+@Test(expected = CheckFailedException.class)
+public void testCheckFailedException() {
+    [...]
+}</code></pre>
+                <h3>run Exercise07.java</h3>
+                <h2 class="fragment fade-up"><b>DEMO</b>nstrate</h2>
+                <h2 class="fragment fade-up"><b>Note:</b> no hard JUnit dependency</h2>
+            </section>
+        </section>
+        <section>
+            <section data-background="#E5F3F9">
+                <h2>Screenshots</h2>
+                <pre><code data-trim data-noescape>
+// either RAW on client side
+[...]
+BufferedImage screenshot = aut.getScreenshot();
+
+// or as file on AUT side
+[...]
+aut.execute(JavafxComponents.createStage()
+    .takeScreenshot(destination, delay, 
+        fileAccess, scalingFactor, 
+        createDirectories), payload);</code></pre>
+            </section>
+         </section>
     </div>
 </div>
 
