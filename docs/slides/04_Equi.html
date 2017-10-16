@@ -40,11 +40,11 @@
         </section>
         <section>
             <section data-background="#E5F3F9">
-                <h2>Idea</h2>
+                <h2>Idea: don't test twice</h2>
                 <a title="By Rinke 80 (Own work) [Public domain], via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File%3AEquivalentie.svg">
                     <img alt="Equivalentie" src="https://upload.wikimedia.org/wikipedia/commons/3/38/Equivalentie.svg"/>
                 </a>
-                <p>classify equivalent data</p>
+                <p>classify equivalent data: equivalence class partitioning</p>
                 <p>don't test equivalent constellations more than once</p>
             </section>
             <section>
@@ -56,6 +56,24 @@
                 <p style="color:purple" class="fragment fade-up">name too long</p>
                 <p style="color:brown" class="fragment fade-up">invalid chars</p>
                 <p style="color:pink" class="fragment fade-up">...</p>
+            </section>
+        </section>
+        <section>
+            <section data-background="#E5F3F9">
+                <h2>Idea: test boundaries</h2>
+                <a title="By Rinke 80 (Own work) [Public domain], via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File%3AEquivalentie.svg">
+                    <img alt="Equivalentie" src="https://upload.wikimedia.org/wikipedia/commons/3/38/Equivalentie.svg"/>
+                </a>
+                <p>errors occur at the edges</p>
+                <p>left - right - and on the edge</p>
+            </section>
+            <section>
+                <img src="https://cdn-images-1.medium.com/max/1200/1*leQsT43ge-lg8JUgcds02g.jpeg" width="50%"/>
+                <p style="color:red">invalid age <font class="fragment fade-up">&lt; 0</font></p>
+                <p style="color:blue">too young <font class="fragment fade-up">0 - 9</font></p>
+                <p style="color:green">ok <font class="fragment fade-up">10 - 20</font></p>
+                <p style="color:purple">too old <font class="fragment fade-up">&gt; 20</font></p>
+                <p class="fragment fade-up"><font style="color:red">.., (-1,</font><font style="color:blue"> 0), 1,..., 8, (9,</font><font style="color:green">10), 11, ..., 19, (20,</font><font style="color:purple"> 21), ...</font></p>
             </section>
         </section>
     </div>
