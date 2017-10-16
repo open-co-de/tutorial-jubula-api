@@ -8,7 +8,7 @@ EclipseCon - Jubula API tutorial
 
 1. Download and install
 - [Java SE Development Kit 8](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
-- [Java SE Development Kit 8 Demos and Samples] (http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) 
+- [Java SE Development Kit 8 Demos and Samples](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) 
 - [Eclipse IDE for Eclipse Committers: Oxygen 1](http://www.eclipse.org/downloads/packages/eclipse-ide-eclipse-committers/oxygen1)
 - all components from [Jubula 8.5](https://testing.bredex.de/jubula-download-page.html) (you will need to register or login to download the standalone version)
 
