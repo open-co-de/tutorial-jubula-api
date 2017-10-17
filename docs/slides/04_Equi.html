@@ -24,22 +24,22 @@
 <body>
 <div class="reveal">
     <div class="slides">
-        <section class="deck-slide" data-background="#E5F3F9">
+        <section class="deck-slide">
             <h1>Excursion</h1>
             <h2>Equivalence classes and boundaries</h2>
         </section>
-        <section data-background="#E5F3F9">
-            <h2>What</h2>
-            <img src="../img/appLOGIN-ok.png" width="50%">
-        </section>
-        <section data-background="#E5F3F9">
+        <section>
             <h2>Why</h2>
             <a title="TestPyramid By Martin Fowler" href="https://martinfowler.com/bliki/TestPyramid.html">
                 <img src="https://martinfowler.com/bliki/images/testPyramid/test-pyramid.png">
             </a>
         </section>
         <section>
-            <section data-background="#E5F3F9">
+            <h2>What</h2>
+            <img src="../img/appLOGIN-ok.png" width="50%">
+        </section>
+        <section>
+            <section>
                 <h2>Idea: don't test twice</h2>
                 <a title="By Rinke 80 (Own work) [Public domain], via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File%3AEquivalentie.svg">
                     <img alt="Equivalentie" src="https://upload.wikimedia.org/wikipedia/commons/3/38/Equivalentie.svg"/>
@@ -59,13 +59,13 @@
             </section>
         </section>
         <section>
-            <section data-background="#E5F3F9">
+            <section>
                 <h2>Idea: test boundaries</h2>
                 <a title="By Rinke 80 (Own work) [Public domain], via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File%3AEquivalentie.svg">
                     <img alt="Equivalentie" src="https://upload.wikimedia.org/wikipedia/commons/3/38/Equivalentie.svg"/>
                 </a>
                 <p>errors occur at the edges</p>
-                <p>left - right - and on the edge</p>
+                <p>left and right</p>
             </section>
             <section>
                 <img src="https://cdn-images-1.medium.com/max/1200/1*leQsT43ge-lg8JUgcds02g.jpeg" width="50%"/>
@@ -75,6 +75,63 @@
                 <p style="color:purple">too old <font class="fragment fade-up">&gt; 20</font></p>
                 <p class="fragment fade-up"><font style="color:red">.., (-1,</font><font style="color:blue"> 0), 1,..., 8, (9,</font><font style="color:green">10), 11, ..., 19, (20,</font><font style="color:purple"> 21), ...</font></p>
             </section>
+        </section>
+        <section>
+		    <section>
+		        <h2>derive coverage path(s)</h2>
+	            <img src="https://pbs.twimg.com/media/CUmvDWIWUAE5nDs.png" width="30%"/>
+		        <p>equivalence classes: valid / invalid data</p>
+		        <p>add knowledge about boundaries</p>
+		        <p>combine: (valid)* with (0-1) invalid per test case</p>
+		    </section>
+              <section data-markdown>
+                <script type="text/template">
+## Example: username / age
+
+| name       | age           | result       | 
+| ---------- |:-------------:| ------------:|
+| valid      | valid         | valid        |
+| invalid    | valid         | invalid name |
+| valid      | invalid       | invalid age  |
+                </script>
+              </section>
+              <section data-markdown>
+                <script type="text/template">
+## Example: username / age
+
+| name       | age           | result       | 
+| ---------- |:-------------:| ------------:|
+| Markus     | 10            | valid        |
+| M          | 20            | invalid name |
+| taken      | 15            | invalid name |
+| ...        | ...           | invalid name |
+| Markus     | -1            | invalid age  |
+| Alex       | 0             | invalid age  |
+| ...        | ...           | invalid age  |
+                </script>
+              </section>
+        </section>
+        <section>
+		    <section>
+		        <h2>Total amount of tests</h2>
+	            <img src="https://www.journalofaccountancy.com/content/dam/jofa/issues/2017/mar/depreciation.jpg" width="30%"/>
+		        <p>happy paths: combine EC valid cases (max. EC for a data field is the total amount of happy paths)</p>
+		        <h3>+</h3>
+		        <p>unhappy paths: one test case for each individual invalid EC</p>
+		        <h4>depends on the "flying altitude" of the EC analysis</h4>
+		    </section>
+              <section data-markdown>
+                <script type="text/template">
+## Total amount: username / age
+
+| name       | age           | result                | 
+| ---------- |:-------------:| ---------------------:|
+| 5 valid    | 2 valid       | 5 valid               |
+| 4 invalid  | 2 valid       | 4 invalid name        |
+| 5 valid    | 3 invalid     | 3 invalid age         |
+|            |               | 12 valid & invalid TCs|
+                </script>
+              </section>
         </section>
     </div>
 </div>
