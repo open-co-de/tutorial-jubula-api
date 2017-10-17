@@ -16,7 +16,7 @@ EclipseCon - Jubula API tutorial
 - `java -version` on the console displays `java version "1.8.0_144"` or similiar
 - `<JavaSEDevelopmentKit8DemosAndSamplesExtractionLocation>/demo/javafx_samples/Ensemble8.jar` launches (e.g. by double-clicking)
 - Eclipse starts and has JDK 8 available
-- the [Jubula AUT Agent can be started with -om option](https://testing.bredex.de/faqs/jubula-api-setup.html)
+- the [Jubula AUT Agent can be started with -om option](https://testing.bredex.de/faqs/how-can-i-perform-mapping-when-using-the-api-without-requiring-the-ite.html) (you only need to perform the steps up until you see the system tray icon for the AUT Agent. We will start the AUT and perform Object Mapping during the tutorial)
 
 3. Clone [this git repository](https://github.com/open-co-de/tutorial-jubula-api.git) to your local machine
 - import project `org.eclipse.jubula.examples.api.jdk.javafx.ensemble.osgi`
