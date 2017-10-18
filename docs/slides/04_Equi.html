@@ -73,17 +73,17 @@
                 <p style="color:blue">too young <font class="fragment fade-up">0 - 9</font></p>
                 <p style="color:green">ok <font class="fragment fade-up">10 - 20</font></p>
                 <p style="color:purple">too old <font class="fragment fade-up">&gt; 20</font></p>
-                <p class="fragment fade-up"><font style="color:red">.., (-1,</font><font style="color:blue"> 0), 1,..., 8, (9,</font><font style="color:green">10), 11, ..., 19, (20,</font><font style="color:purple"> 21), ...</font></p>
+                <small class="fragment fade-up"><font style="color:red"><u>-10</u>, .., (<u>-1</u>,</font><font style="color:blue"> <u>0</u>), 1, ..., <u>5</u>, ..., 8, (<u>9</u>,</font><font style="color:green"><u>10</u>), 11, ..., <u>15</u>, ..., 19, (<u>20</u>,</font><font style="color:purple"> <u>21</u>), ..., <u>30</u></font></small>
             </section>
         </section>
         <section>
-		    <section>
-		        <h2>derive coverage path(s)</h2>
-           	    <img src="../img/dependencies.png" width="50%">
-		        <p>equivalence classes: valid / invalid data</p>
-		        <p>add knowledge about boundaries</p>
-		        <p>combine: (valid)* with (0-1) invalid per test case</p>
-		    </section>
+            <section>
+                <h2>derive coverage path(s)</h2>
+                   <img src="../img/dependencies.png" width="40%">
+                <p>equivalence classes: valid / invalid data</p>
+                <p>add knowledge about boundaries</p>
+                <p>combine: (valid)* with (0-1) invalid per test case</p>
+            </section>
               <section data-markdown>
                 <script type="text/template">
 ## Example: username / age
@@ -112,14 +112,14 @@
               </section>
         </section>
         <section>
-		    <section>
-		        <h2>Total amount of tests</h2>
-	            <img src="https://www.journalofaccountancy.com/content/dam/jofa/issues/2017/mar/depreciation.jpg" width="30%"/>
-		        <p>happy paths: combine EC valid cases (max. EC for a data field is the total amount of happy paths)</p>
-		        <h3>+</h3>
-		        <p>unhappy paths: one test case for each individual invalid EC</p>
-		        <h4>depends on the "flying altitude" of the EC analysis</h4>
-		    </section>
+            <section>
+                <h2>Total amount of tests</h2>
+                <img src="https://www.journalofaccountancy.com/content/dam/jofa/issues/2017/mar/depreciation.jpg" width="30%"/>
+                <p>happy paths: combine EC valid cases (max. EC for a data field is the total amount of happy paths)</p>
+                <h3>+</h3>
+                <p>unhappy paths: one test case for each individual invalid EC</p>
+                <h4>depends on the "flying altitude" of the EC analysis</h4>
+            </section>
               <section data-markdown>
                 <script type="text/template">
 ## Total amount: username / age
