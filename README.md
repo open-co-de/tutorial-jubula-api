@@ -23,7 +23,7 @@ EclipseCon - Jubula API tutorial
 - set `ide/api-OSGi.target` as target definition
 - make sure the project shows no compile errors
 
-4. Grab a cup of coffee and join the [ECE 2017 tutorial](https://www.eclipsecon.org/europe2017/session/ui-test-automation-using-jubula-api-why-how-and-what)
+4. Grab a cup of coffee and join the tutorial
 
 5. Enjoy!
 
